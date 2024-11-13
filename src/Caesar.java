@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Caesar
 {
 private String Kt;
@@ -16,8 +18,8 @@ public void verschluessen()
           //gt.charAt(i) = (char)(Kt.charAt(i)+s);
 
             gt = gt+(char)(Kt.charAt(i)+s);
-
         }
+        System.out.println(gt);
     }
 
 
@@ -25,7 +27,7 @@ public void verschluessen()
     {
         for(int i = 0; i< Kt.length(); i++ )
         {
-            kt.charAt(i) = (char)(gt.charAt(i)-s);
+            Kt = Kt+(char)(gt.charAt(i)-s);
         }
     }
     private char getChar(int pWert) {
@@ -41,10 +43,10 @@ public void verschluessen()
     String pGt = gt;
     }
     public String getKt(){
-   return kt;
+   return Kt;
     }
         public void setKt(String pkt){
-    pkt= kt;
+    pkt= Kt;
         }
 
     public int getS() {
