@@ -20,7 +20,7 @@ public class verwaltung {
             System.out.println("[1] verschlüsseln");
             System.out.println("[2] entschlüsseln");
             System.out.println("[0] Beenden");
-            System.out.println("gib das wort zum verschlüsseln");
+            System.out.println("zum zurücksetzten von verschlüsseln und entschlüsseln 3 drücken");
             option=scanner.nextInt();
             if (option == 1) {
                 caesar = new Caesar();
@@ -28,7 +28,9 @@ public class verwaltung {
                 Kt = scanner.nextLine();
                 caesar.setKt(Kt);
                 System.out.println("gib den schlüssel an");
-                s = scanner.nextInt();
+                String sh = scanner.nextLine();
+                 s= Integer.parseInt(sh);
+
                 caesar.setS(s);
                 this.caesar.verschluessen();
             }
@@ -37,10 +39,13 @@ public class verwaltung {
                 System.out.println("gib das zu entschlüsselnde Wort an");
                 gt = scanner.nextLine();
                 System.out.println("gib den Schlüssel an");
-               s = scanner.nextInt();
+                String sh = scanner.nextLine();
+                 s= Integer.parseInt(sh);
             }
             else if(option == 3)
-            {break;}
+            {   gt="";
+                Kt="";
+                break;}
         }
     }
 }

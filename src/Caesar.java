@@ -52,6 +52,7 @@ public void verschluessen()
     public int getS() {
         return s;
     }
+    public void setS(int pWert ){s = pWert;}
 
 
 }
