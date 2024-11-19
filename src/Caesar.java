@@ -8,26 +8,30 @@ private int s;
 private int ASCII;
 
 public Caesar(){
+  Kt = "";
+  gt= "";
+  s=0;
 
 }
 
 public void verschluessen()
     {
-        for(int i = 0; i< Kt.length(); i++ )
-        {
-          //gt.charAt(i) = (char)(Kt.charAt(i)+s);
-
-            gt = gt+(char)(Kt.charAt(i)+s);
+        System.out.println("ich funktuniere");
+        for (int i = 0; i< Kt.length(); i++ ) {
+         int h =  this.getAscii(Kt.charAt(i));
+         gt= gt + this.getChar(h+s);
+           System.out.println(gt);
         }
-        System.out.println(gt);
-    }
 
+    }
 
     public  void entschluessln()
     {
-        for(int i = 0; i< Kt.length(); i++ )
+        for(int i = 0; i< gt.length(); i++ )
         {
-            Kt = Kt+(char)(gt.charAt(i)-s);
+
+            int h =  this.getAscii(gt.charAt(i));
+            Kt = Kt + this.getChar(h-s);
         }
     }
     private char getChar(int pWert) {
@@ -36,17 +40,17 @@ public void verschluessen()
     private int getAscii(char pWert) {
     return (int) pWert;
     }
-    public String getGt() {
+    public String getgt() {
     return gt;
     }
-    public void setGt(String pgt) {
-    String pGt = gt;
+    public void setgt(String pgt) {
+    String gt = pgt;
     }
     public String getKt(){
    return Kt;
     }
-        public void setKt(String pkt){
-    pkt= Kt;
+        public void setKt(String pKt){
+    Kt= pKt;
         }
 
     public int getS() {
