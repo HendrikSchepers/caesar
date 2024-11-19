@@ -30,8 +30,9 @@ public void verschluessen()
         for(int i = 0; i< gt.length(); i++ )
         {
 
-            int h =  this.getAscii(gt.charAt(i));
-            Kt = Kt + this.getChar(h-s);
+            int m =  this.getAscii(gt.charAt(i));
+            Kt = Kt + this.getChar(m-s);
+           // System.out.println(Kt);
         }
     }
     private char getChar(int pWert) {
@@ -44,7 +45,7 @@ public void verschluessen()
     return gt;
     }
     public void setgt(String pgt) {
-    String gt = pgt;
+     gt = pgt;
     }
     public String getKt(){
    return Kt;
