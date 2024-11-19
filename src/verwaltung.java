@@ -38,10 +38,13 @@ public class verwaltung {
             }
             else if (option == 2)
             {
+                caesar = new Caesar();
                 System.out.println("gib das zu entschlüsselnde Wort an");
                 gt = scanner.nextLine();
+                caesar.setgt(gt);
                 System.out.println("gib den Schlüssel an");
                s =scanner.nextInt();
+               caesar.setS(s);
                  this.caesar.entschluessln();
                 System.out.println(this.caesar.getKt());
             }
