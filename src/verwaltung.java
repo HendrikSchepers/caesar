@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class verwaltung {
     private Scanner scanner;
     private Caesar caesar;
+    private Viginere viginere;
 
     public static void main(String[] Args) {
         new verwaltung();
@@ -12,6 +13,8 @@ public class verwaltung {
         String Kt;
         int s;
         String gt;
+        String sv;
+        sv="";
         while(true) {
             int option;
 
@@ -19,8 +22,8 @@ public class verwaltung {
             System.out.println("== HAUPTMENÜ ==");
             System.out.println("[1] verschlüsseln");
             System.out.println("[2] entschlüsseln");
-            System.out.println("[3] Beenden");
-            System.out.println("zum zurücksetzten von verschlüsseln und entschlüsseln 3 drücken");
+            System.out.println("[3] Verschlüsseln Viginere");
+            System.out.println("zum zurücksetzten von verschlüsseln und entschlüsseln 4 drücken");
             option=scanner.nextInt();
             scanner.nextLine();
             if (option == 1) {
@@ -48,7 +51,20 @@ public class verwaltung {
                  this.caesar.entschluessln();
                 System.out.println(this.caesar.getKt());
             }
-            else if(option == 3)
+            else if(option ==3) {
+                viginere = new Viginere();
+                System.out.println("gib das zu verschlüsselnde Wort an");
+                Kt = scanner.nextLine();
+                viginere.setKt(Kt);
+                System.out.println("gib den schlüssel in Großbuchstaben an");
+                sv = scanner.nextLine();
+
+
+                viginere.setS(sv);
+                viginere.verschluessen();
+                System.out.println("Das ist die geheimnachicht: "+viginere.getgt());
+            }
+            else if(option == 4)
             {   gt="";
                 Kt="";
                 break;}
