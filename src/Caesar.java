@@ -18,10 +18,10 @@ public void verschluessen()
     {
         System.out.println("ich funktuniere");
         for (int i = 0; i< Kt.length(); i++ ) {
-         int h =  this.getAscii(Kt.charAt(i));
-         gt= gt + this.getChar(h+s);
-           System.out.println(gt);
-        }
+            int h =  this.getAscii(Kt.charAt(i));
+            gt= gt + this.getChar(h+s);
+           //System.out.println(gt);
+        }//die for schleife geht
 
     }
 

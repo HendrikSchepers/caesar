@@ -16,16 +16,16 @@ public class Viginere {
     }
     public void verschluessen()
     {
-        System.out.println("ich funktuniere");
+        //System.out.println("ich funktuniere");
         for (int i = 0; i< Kt.length(); i++ ) {
 
          int h =  this.getAscii(Kt.charAt(i));
-         System.out.println("test 1");
+        // System.out.println("test 1");
          g =this.getAscii(sv.charAt(a));
          g = g-65;
-         System.out.println("Test "+g);
+         //System.out.println("Test "+g);
          gt= gt + this.getChar(h+g);
-           System.out.println("gt:"+gt);
+           //System.out.println("gt:"+gt);
            a++;
            if (a >= sv.length())
             {a=0;}
@@ -42,26 +42,26 @@ public class Viginere {
     }
      private char getChar(int pWert) {
         return (char)pWert;
-    }
+    }// gibt den Buchstaben zum Ascii wert wieder aus
     private int getAscii(char pWert) {
     return (int) pWert;
-    }
+    }// Gibt den Ascii wert zum angefragten Buchstaben aus
     public String getgt() {
     return gt;
-    }
+    }// Gibt das verschlüsselte Wort zurück
     public void setgt(String pgt) {
      gt = pgt;
-    }
+    } // kriegt den geheimtext den der Benutzter in der Konsole angibt
     public String getKt(){
    return Kt;
-    }
+    }// Gibt das entschlüsselte Wort aus
         public void setKt(String pKt){
     Kt= pKt;
-        }
+        }//kriegt das Verschlüsselte Wort welches der Benutzer angibt
     public void setS(String pWert ){sv = pWert;}
-
-    public int getS(int i) {
-        return sv.charAt(i);
-    }
+    // kriegt den schlüssel den der Benutzer angibt
+    public String getS() {
+        return sv;
+    }//gibt den Ascii wert an der Stelle i zurück
 
 }
