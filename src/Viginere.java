@@ -24,6 +24,8 @@ public class Viginere {
          g =this.getAscii(sv.charAt(a));
          g = g-65;
          //System.out.println("Test "+g);
+            if(h+g>91)
+            {g=g-26;}
          gt= gt + this.getChar(h+g);
            //System.out.println("gt:"+gt);
            a++;
@@ -39,6 +41,22 @@ public class Viginere {
         // die if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
         //heute weiß ich und gott was die Methode macht morgen nur gott!!
+    }
+    public void entschlusseln() {
+      a = 0;
+        for(int i = 0; i< gt.length(); i++ )
+        {
+
+            int m =  this.getAscii(gt.charAt(i));
+            int x = this.getAscii(sv.charAt(a))-65;
+            if(m-x<65)
+            {x=x+26;}
+            Kt = Kt + this.getChar(m-x);
+            a++;
+            // System.out.println(Kt);
+            if (a >= sv.length())
+            {a=0;}
+        }
     }
      private char getChar(int pWert) {
         return (char)pWert;

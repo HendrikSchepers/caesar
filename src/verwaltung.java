@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class verwaltung {
+public class verwaltung  {
     private Scanner scanner;
     private Caesar caesar;
     private Viginere viginere;
@@ -23,6 +23,7 @@ public class verwaltung {
             System.out.println("[1] verschlüsseln");
             System.out.println("[2] entschlüsseln");
             System.out.println("[3] Verschlüsseln Viginere");
+            System.out.println("[4] Entschlüsseln Viginere");
             System.out.println("zum zurücksetzten von verschlüsseln und entschlüsseln 4 drücken");
             option=scanner.nextInt();
             scanner.nextLine();
@@ -65,6 +66,20 @@ public class verwaltung {
                 System.out.println("Das ist die geheimnachicht: "+viginere.getgt());
             }
             else if(option == 4)
+            {
+              viginere = new Viginere();
+                System.out.println("gib das zu entschlüsselnde Wort an");
+                gt = scanner.nextLine();
+                viginere.setgt(gt);
+                System.out.println("gib den schlüssel in Großbuchstaben an");
+                sv = scanner.nextLine();
+
+
+                viginere.setS(sv);
+                viginere.entschlusseln();
+                System.out.println("Das ist das entschlüsselte Wort: "+viginere.getKt());
+            }
+            else if(option == 5)
             {   gt="";
                 Kt="";
                 break;}
