@@ -4,7 +4,7 @@ public class verwaltung  {
     private Scanner scanner;
     private Caesar caesar;
     private Viginere viginere;
-
+    private String h;
     public static void main(String[] Args) {
         new verwaltung();
     }
@@ -20,19 +20,21 @@ public class verwaltung  {
 
             scanner = new Scanner(System.in);
             System.out.println("== HAUPTMENÜ ==");
-            System.out.println("[1] verschlüsseln");
-            System.out.println("[2] entschlüsseln");
-            System.out.println("[3] Verschlüsseln Viginere");
-            System.out.println("[4] Entschlüsseln Viginere");
-            System.out.println("zum zurücksetzten von verschlüsseln und entschlüsseln 4 drücken");
+            System.out.println("Drücken sie [1] um mithilfe des Caeser verfahrens ein Wort zu verschlüsseln ");
+            System.out.println("Drücken sie [2] um mithilfe des Caeser verfahrens ein Wort zu entschlüsseln ");
+            System.out.println("Drücken sie [3] um mithilfe des Viginere verfahrens ein Wort zu Verschlüsseln ");
+            System.out.println("Drücken sie [4] um mithilfe des Viginere Verfahren ein Wort zu Entschlüsseln ");
+            System.out.println("Drücken sie [5] um das Programm zu beenden");
             option=scanner.nextInt();
             scanner.nextLine();
             if (option == 1) {
                 caesar = new Caesar();
                 System.out.println("gib das zu verschlüsselnde Wort an");
-                Kt = scanner.nextLine();
+                h = scanner.nextLine();
+                Kt= h.toUpperCase();
                 caesar.setKt(Kt);
-                System.out.println("gib den schlüssel an");
+                System.out.println("gib sie eine Zahl als Schlüssel an");
+
                 s = scanner.nextInt();
 
 
@@ -44,9 +46,10 @@ public class verwaltung  {
             {
                 caesar = new Caesar();
                 System.out.println("gib das zu entschlüsselnde Wort an");
-                gt = scanner.nextLine();
+                h = scanner.nextLine();
+                gt= h.toUpperCase();
                 caesar.setgt(gt);
-                System.out.println("gib den Schlüssel an");
+                System.out.println("geben sie den schlüssel als zahl an");
                s =scanner.nextInt();
                caesar.setS(s);
                  this.caesar.entschluessln();
@@ -55,10 +58,12 @@ public class verwaltung  {
             else if(option ==3) {
                 viginere = new Viginere();
                 System.out.println("gib das zu verschlüsselnde Wort an");
-                Kt = scanner.nextLine();
+                h = scanner.nextLine();
+                Kt= h.toUpperCase();
                 viginere.setKt(Kt);
-                System.out.println("gib den schlüssel in Großbuchstaben an");
-                sv = scanner.nextLine();
+                System.out.println("gib den schlüssel als wort an");
+                h = scanner.nextLine();
+                sv= h.toUpperCase();
 
 
                 viginere.setS(sv);
@@ -69,10 +74,12 @@ public class verwaltung  {
             {
               viginere = new Viginere();
                 System.out.println("gib das zu entschlüsselnde Wort an");
-                gt = scanner.nextLine();
+                h = scanner.nextLine();
+                gt= h.toUpperCase();
                 viginere.setgt(gt);
-                System.out.println("gib den schlüssel in Großbuchstaben an");
-                sv = scanner.nextLine();
+                System.out.println("gib den schlüssel als Buchstaben an");
+                h = scanner.nextLine();
+                sv= h.toUpperCase();
 
 
                 viginere.setS(sv);

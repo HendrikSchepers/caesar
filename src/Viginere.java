@@ -24,7 +24,7 @@ public class Viginere {
          g =this.getAscii(sv.charAt(a));
          g = g-65;
          //System.out.println("Test "+g);
-            if(h+g>91)
+            while(h+g>91)
             {g=g-26;}
          gt= gt + this.getChar(h+g);
            //System.out.println("gt:"+gt);
@@ -49,8 +49,8 @@ public class Viginere {
 
             int m =  this.getAscii(gt.charAt(i));
             int x = this.getAscii(sv.charAt(a))-65;
-            if(m-x<65)
-            {x=x+26;}
+            while(m-x<65)
+            {m=m+26;}
             Kt = Kt + this.getChar(m-x);
             a++;
             // System.out.println(Kt);
@@ -60,9 +60,9 @@ public class Viginere {
         // Wird der Ascii wert von den Buchstaben von dem zu entschlüsselnden Wort übermittelt.
         // sv stelt den Schlüssel da. Durch getAscii kriegen wir die Ascii werte von den Buchstaben des Schlüssels
         // Diese Werte ziehen wir dann vom Ascii wert von den Buchstaben des zu entschlüsselndes Wortes ab.
-        // Falls der neue wert den Definitions bereich des Lateinischen alphabets verlässt wird mit der if abfrage
+        // Falls der neue wert den Definitions bereich des Lateinischen alphabets verlässt wird mit der while schleife
         // +26 drauf gerechnet um so wieder vorne im Lateinischen Alphabet anzufangen.
-        //die 2. if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
+        //die  if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
         //heute weiß ich und gott was die Methode macht morgen nur gott!!
     }
