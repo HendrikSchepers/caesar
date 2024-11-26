@@ -56,7 +56,15 @@ public class Viginere {
             // System.out.println(Kt);
             if (a >= sv.length())
             {a=0;}
-        }
+        }//Die schleife geht das zu entschlüsselnde wort durch. Von der Methode get Ascii
+        // Wird der Ascii wert von den Buchstaben von dem zu entschlüsselnden Wort übermittelt.
+        // sv stelt den Schlüssel da. Durch getAscii kriegen wir die Ascii werte von den Buchstaben des Schlüssels
+        // Diese Werte ziehen wir dann vom Ascii wert von den Buchstaben des zu entschlüsselndes Wortes ab.
+        // Falls der neue wert den Definitions bereich des Lateinischen alphabets verlässt wird mit der if abfrage
+        // +26 drauf gerechnet um so wieder vorne im Lateinischen Alphabet anzufangen.
+        //die 2. if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
+        // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
+        //heute weiß ich und gott was die Methode macht morgen nur gott!!
     }
      private char getChar(int pWert) {
         return (char)pWert;
