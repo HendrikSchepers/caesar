@@ -1,7 +1,7 @@
 public abstract class Kryptomat{
     public String Kt;
     public String gt;
-
+//
     public abstract void verschluessen();
     public  abstract void entschluessln();
 

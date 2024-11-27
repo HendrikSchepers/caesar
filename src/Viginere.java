@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//
 public class Viginere extends Kryptomat{
 
     private String sv;
