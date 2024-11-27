@@ -4,6 +4,7 @@ public class verwaltung  {
     private Scanner scanner;
     private Caesar caesar;
     private Viginere viginere;
+    private Polybius polybius;
     private String h;
     public static void main(String[] Args) {
         new verwaltung();
@@ -24,7 +25,7 @@ public class verwaltung  {
             System.out.println("Drücken sie [2] um mithilfe des Caeser verfahrens ein Wort zu entschlüsseln ");
             System.out.println("Drücken sie [3] um mithilfe des Viginere verfahrens ein Wort zu Verschlüsseln ");
             System.out.println("Drücken sie [4] um mithilfe des Viginere Verfahren ein Wort zu Entschlüsseln ");
-            System.out.println("Drücken sie [5] um das Programm zu beenden");
+            System.out.println("Drücken sie [0] um das Programm zu beenden");
             option=scanner.nextInt();
             scanner.nextLine();
             if (option == 1) {
@@ -53,7 +54,7 @@ public class verwaltung  {
                s =scanner.nextInt();
                caesar.setS(s);
                  this.caesar.entschluessln();
-                System.out.println("Das entschlüsselte Wort ist"+this.caesar.getKt());
+                System.out.println("Das entschlüsselte Wort ist " +this.caesar.getKt());
             }
             else if(option ==3) {
                 viginere = new Viginere();
@@ -86,10 +87,17 @@ public class verwaltung  {
                 viginere.entschluessln();
                 System.out.println("Das ist das entschlüsselte Wort: "+viginere.getKt());
             }
-            else if(option == 5)
+
+           else if(option == 6)
+        {
+            polybius = new Polybius();
+            polybius.bfms();
+        }
+            else if(option == 0)
             {   gt="";
                 Kt="";
                 break;}
         }
+
     }
 }

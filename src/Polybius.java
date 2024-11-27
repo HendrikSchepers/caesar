@@ -1,26 +1,36 @@
 public class Polybius extends Kryptomat{
-    public int [][] alphabetQuadrat ;
+    public int alphabetQuadrat[][] = new int[7][7];
+
+
+
     public void Polybius(){
         kt = "";
         gt= "";
-
+        alphabetQuadrat [0][0]= 0;
     }
-    private void bfms(){
+    public void bfms(){
         int q = 1;
         int z = 65;
-        for(int i = 1; i<6; i++)
+       int i =1;
+       while (z<91)
         {
             if(z == 74)
             { z++;}
             alphabetQuadrat[q][i] = z;
-                    q++;
-                    if (i==6);
+            System.out.println(q + "q");
+            System.out.println(alphabetQuadrat[q][i]);
+
+                    if (i==6)
             {
-                q= 1;
+                q++;
+                i = 0;
             }
+
             z++;
 
+            i++;
         }
+
     }
     public void verschluesseln(){};
 
