@@ -7,17 +7,17 @@ private int s;
 private int ASCII;
 
 public Caesar(){
-  Kt = "";
+  kt = "";
   gt= "";
   s=0;
 
 }
 
-public void verschluessen()
+public void verschluesseln()
     {
        // System.out.println("ich funktuniere");
-        for (int i = 0; i< Kt.length(); i++ ) {
-            int h =  getAscii(Kt.charAt(i));
+        for (int i = 0; i< kt.length(); i++ ) {
+            int h =  getAscii(kt.charAt(i));
             while (h+s>91)
             {h=h-26;}
             gt= gt + this.getChar(h+s);
@@ -39,7 +39,7 @@ public void verschluessen()
             int m =  this.getAscii(gt.charAt(i));
             while (m-s<65)
             {m=m+26;}
-            Kt = Kt + this.getChar(m-s);
+            kt = kt + this.getChar(m-s);
            // System.out.println(Kt);
             // Die schleife geht das zu entschlüsselnde wort durch. Von der Methode get Ascii
             // Wird der Ascii wert von den Buchstaben von dem zu entschlüsselnden Wort übermittelt.

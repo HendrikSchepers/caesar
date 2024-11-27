@@ -39,8 +39,8 @@ public class verwaltung  {
 
 
                 caesar.setS(s);
-                this.caesar.verschluessen();
-                System.out.println("Das ist die geheimnachicht: "+this.caesar.getgt());
+                this.caesar.verschluesseln();
+                System.out.println("Das ist die geheimnachicht: "+this.caesar.getGt());
             }
             else if (option == 2)
             {
@@ -48,12 +48,12 @@ public class verwaltung  {
                 System.out.println("gib das zu entschlüsselnde Wort an");
                 h = scanner.nextLine();
                 gt= h.toUpperCase();
-                caesar.setgt(gt);
+                caesar.setGt(gt);
                 System.out.println("geben sie den schlüssel als zahl an");
                s =scanner.nextInt();
                caesar.setS(s);
                  this.caesar.entschluessln();
-                System.out.println(this.caesar.getKt());
+                System.out.println("Das entschlüsselte Wort ist"+this.caesar.getKt());
             }
             else if(option ==3) {
                 viginere = new Viginere();
@@ -67,8 +67,8 @@ public class verwaltung  {
 
 
                 viginere.setS(sv);
-                viginere.verschluessen();
-                System.out.println("Das ist die geheimnachicht: "+viginere.getgt());
+                viginere.verschluesseln();
+                System.out.println("Das ist die geheimnachicht: "+viginere.getGt());
             }
             else if(option == 4)
             {
@@ -76,7 +76,7 @@ public class verwaltung  {
                 System.out.println("gib das zu entschlüsselnde Wort an");
                 h = scanner.nextLine();
                 gt= h.toUpperCase();
-                viginere.setgt(gt);
+                viginere.setGt(gt);
                 System.out.println("gib den schlüssel als Buchstaben an");
                 h = scanner.nextLine();
                 sv= h.toUpperCase();

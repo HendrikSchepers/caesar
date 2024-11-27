@@ -7,18 +7,18 @@ public class Viginere extends Kryptomat{
     private int a = 0;
     private int g = 0;
     public Viginere(){
-        Kt = "";
+        kt = "";
         gt= "";
         sv="";
         a = 0;
         g = 0;
     }
-    public void verschluessen()
+    public void verschluesseln()
     {
         //System.out.println("ich funktuniere");
-        for (int i = 0; i< Kt.length(); i++ ) {
+        for (int i = 0; i< kt.length(); i++ ) {
 
-         int h =  this.getAscii(Kt.charAt(i));
+         int h =  this.getAscii(kt.charAt(i));
         // System.out.println("test 1");
          g =this.getAscii(sv.charAt(a));
          g = g-65;
@@ -50,7 +50,7 @@ public class Viginere extends Kryptomat{
             int x = this.getAscii(sv.charAt(a))-65;
             while(m-x<65)
             {m=m+26;}
-            Kt = Kt + this.getChar(m-x);
+            kt = kt + this.getChar(m-x);
             a++;
             // System.out.println(Kt);
             if (a >= sv.length())

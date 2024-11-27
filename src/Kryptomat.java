@@ -1,8 +1,8 @@
 public abstract class Kryptomat{
-    public String Kt;
+    public String kt;
     public String gt;
 //
-    public abstract void verschluessen();
+    public abstract void verschluesseln();
     public  abstract void entschluessln();
 
     public char getChar(int pWert) {
@@ -12,17 +12,17 @@ public abstract class Kryptomat{
     return (int) pWert;
     }
     // Gibt den Ascii wert zum angefragten Buchstaben aus
-    public String getgt() {
+    public String getGt() {
     return gt;
     }// Gibt das verschlüsselte Wort zurück
-    public void setgt(String pgt) {
+    public void setGt(String pgt) {
      gt = pgt;
     }// kriegt den geheimtext den der Benutzter in der Konsole angibt
     public String getKt(){
-   return Kt;
+   return kt;
     }// Gibt das entschlüsselte Wort aus
         public void setKt(String pKt){
-    Kt= pKt;
+    kt= pKt;
         }//kriegt das Verschlüsselte Wort welches der Benutzer angibt
 }
 
