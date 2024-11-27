@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class Viginere {
-    private String Kt;
-    private String gt;
+public class Viginere extends Kryptomat{
+
     private String sv;
     private int ASCII;
     private int a = 0;
@@ -42,7 +41,7 @@ public class Viginere {
         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
         //heute weiß ich und gott was die Methode macht morgen nur gott!!
     }
-    public void entschlusseln() {
+    public void entschluessln() {
       a = 0;
         for(int i = 0; i< gt.length(); i++ )
         {
@@ -66,24 +65,7 @@ public class Viginere {
         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
         //heute weiß ich und gott was die Methode macht morgen nur gott!!
     }
-     private char getChar(int pWert) {
-        return (char)pWert;
-    }// gibt den Buchstaben zum Ascii wert wieder aus
-    private int getAscii(char pWert) {
-    return (int) pWert;
-    }// Gibt den Ascii wert zum angefragten Buchstaben aus
-    public String getgt() {
-    return gt;
-    }// Gibt das verschlüsselte Wort zurück
-    public void setgt(String pgt) {
-     gt = pgt;
-    } // kriegt den geheimtext den der Benutzter in der Konsole angibt
-    public String getKt(){
-   return Kt;
-    }// Gibt das entschlüsselte Wort aus
-        public void setKt(String pKt){
-    Kt= pKt;
-        }//kriegt das Verschlüsselte Wort welches der Benutzer angibt
+
     public void setS(String pWert ){sv = pWert;}
     // kriegt den schlüssel den der Benutzer angibt
     public String getS() {

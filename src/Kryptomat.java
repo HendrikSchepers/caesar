@@ -25,3 +25,12 @@ public abstract class Kryptomat{
     Kt= pKt;
         }//kriegt das Verschlüsselte Wort welches der Benutzer angibt
 }
+
+
+
+
+
+
+
+
+

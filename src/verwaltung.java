@@ -83,7 +83,7 @@ public class verwaltung  {
 
 
                 viginere.setS(sv);
-                viginere.entschlusseln();
+                viginere.entschluessln();
                 System.out.println("Das ist das entschlüsselte Wort: "+viginere.getKt());
             }
             else if(option == 5)
