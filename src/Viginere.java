@@ -13,6 +13,19 @@ public class Viginere extends Kryptomat{
         a = 0;
         g = 0;
     }
+
+    /**
+     * / Die Schleife geht das zu verschlüsselnde Wort durch und kriegt durch die Methode
+     *         //getAscii den Ascii wert des Buchstabens an der stelle I und speichert den in h
+     *         // g speichert den Asciiwert des Buchstabens vom Schlüssel an der Stelle a
+     *         //g wird minus 65 gerechnet damit der Schlüssel + das zu verschlüsselnde Wort
+     *         // nicht aus der Ascii tabelle des Lateinischen Alphabet überschreitet
+     *         //in gt werden die Ascii werte von dem zu Verschlüsselnden Wort + dem Schlüsseln gespeichert
+     *         // a wird erhöht um den nächsten Buchstaben im Schlüssel zu bekommen
+     *         // die if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
+     *         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
+     *         //heute weiß ich und gott was die Methode macht morgen nur gott!!
+     */
     public void verschluesseln()
     {
         //System.out.println("ich funktuniere");
@@ -30,17 +43,20 @@ public class Viginere extends Kryptomat{
            a++;
            if (a >= sv.length())
             {a=0;}
-        }// Die Schleife geht das zu verschlüsselnde Wort durch und kriegt durch die Methode
-        //getAscii den Ascii wert des Buchstabens an der stelle I und speichert den in h
-        // g speichert den Asciiwert des Buchstabens vom Schlüssel an der Stelle a
-        //g wird minus 65 gerechnet damit der Schlüssel + das zu verschlüsselnde Wort
-        // nicht aus der Ascii tabelle des Lateinischen Alphabet überschreitet
-        //in gt werden die Ascii werte von dem zu Verschlüsselnden Wort + dem Schlüsseln gespeichert
-        // a wird erhöht um den nächsten Buchstaben im Schlüssel zu bekommen
-        // die if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
-        // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
-        //heute weiß ich und gott was die Methode macht morgen nur gott!!
+        }
     }
+
+    /**
+     * //Die schleife geht das zu entschlüsselnde wort durch. Von der Methode get Ascii
+     *         // Wird der Ascii wert von den Buchstaben von dem zu entschlüsselnden Wort übermittelt.
+     *         // sv stelt den Schlüssel da. Durch getAscii kriegen wir die Ascii werte von den Buchstaben des Schlüssels
+     *         // Diese Werte ziehen wir dann vom Ascii wert von den Buchstaben des zu entschlüsselndes Wortes ab.
+     *         // Falls der neue wert den Definitions bereich des Lateinischen alphabets verlässt wird mit der while schleife
+     *         // +26 drauf gerechnet um so wieder vorne im Lateinischen Alphabet anzufangen.
+     *         //die  if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
+     *         // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
+     *         //heute weiß ich und gott was die Methode macht morgen nur gott!!
+     */
     public void entschluessln() {
       a = 0;
         for(int i = 0; i< gt.length(); i++ )
@@ -55,21 +71,23 @@ public class Viginere extends Kryptomat{
             // System.out.println(Kt);
             if (a >= sv.length())
             {a=0;}
-        }//Die schleife geht das zu entschlüsselnde wort durch. Von der Methode get Ascii
-        // Wird der Ascii wert von den Buchstaben von dem zu entschlüsselnden Wort übermittelt.
-        // sv stelt den Schlüssel da. Durch getAscii kriegen wir die Ascii werte von den Buchstaben des Schlüssels
-        // Diese Werte ziehen wir dann vom Ascii wert von den Buchstaben des zu entschlüsselndes Wortes ab.
-        // Falls der neue wert den Definitions bereich des Lateinischen alphabets verlässt wird mit der while schleife
-        // +26 drauf gerechnet um so wieder vorne im Lateinischen Alphabet anzufangen.
-        //die  if abfrage vergleicht den wert von a mit der Länge des Schlüssels wenn a
-        // größer ist als die LÄnge dann wird a wieder auf 0 gesetzt
-        //heute weiß ich und gott was die Methode macht morgen nur gott!!
+        }
     }
 
+    /**
+     * // kriegt den schlüssel den der Benutzer angibt
+     * und speichert diesen um ihn in anderen Methoden weiter zuverwenden
+     * @param pWert
+     */
     public void setS(String pWert ){sv = pWert;}
-    // kriegt den schlüssel den der Benutzer angibt
+
+
+    /**
+     * gibt den Schlüssel zurück
+     * @return den schlüssel
+     */
     public String getS() {
         return sv;
-    }//gibt den Ascii wert an der Stelle i zurück
+    }
 
 }

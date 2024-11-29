@@ -19,16 +19,26 @@ public abstract class Kryptomat{
      */
     public String getGt() {
     return gt;
-    }//
+    }
+    /*
+    ** kriegt den geheimtext den der Benutzter in der Konsole angibt
+     */
     public void setGt(String pgt) {
      gt = pgt;
-    }// kriegt den geheimtext den der Benutzter in der Konsole angibt
+    }
+
+    /**
+     *  Gibt das entschlüsselte Wort aus
+     * @return den wert von kt
+     */
     public String getKt(){
    return kt;
-    }// Gibt das entschlüsselte Wort aus
+    }   /**
+     kriegt das Verschlüsselte Wort welches der Benutzer angibt
+    */
         public void setKt(String pKt){
     kt= pKt;
-        }//kriegt das Verschlüsselte Wort welches der Benutzer angibt
+        }
 }
 
 
