@@ -12,9 +12,14 @@ public abstract class Kryptomat{
     return (int) pWert;
     }
     // Gibt den Ascii wert zum angefragten Buchstaben aus
+
+    /**
+     * Gibt das verschlüsselte Wort zurück
+     * @return gt
+     */
     public String getGt() {
     return gt;
-    }// Gibt das verschlüsselte Wort zurück
+    }//
     public void setGt(String pgt) {
      gt = pgt;
     }// kriegt den geheimtext den der Benutzter in der Konsole angibt

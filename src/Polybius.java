@@ -1,12 +1,12 @@
 public class Polybius extends Kryptomat{
-    public String alphabetQuadrat[][] = new String[7][7];
-
+    public char alphabetQuadrat[][] = new char[7][7];
+    private int s;
 
 
     public void Polybius(){
         kt = "";
         gt= "";
-        alphabetQuadrat [0][0]= "0";
+        alphabetQuadrat [0][0]= '0';
     }
     public void bfms(){
         int q = 1;
@@ -16,8 +16,8 @@ public class Polybius extends Kryptomat{
         {
             if(z == 74)
             { z++;}
-            alphabetQuadrat[q][i] =  ""+ this.getChar(z);
-            System.out.println(q + "q");
+            alphabetQuadrat[q][i] =  this.getChar(z);
+            //System.out.println(q + "q");
             System.out.println(alphabetQuadrat[q][i]);
                     if (i==6)
             {
@@ -34,7 +34,15 @@ public class Polybius extends Kryptomat{
     };
 
 
-    public   void entschluessln(){};
+    public   void entschluessln(){
+
+    };
 
 
-        }
+    public int getS() {
+        return s;
+    }
+    public void setS(int pWert ){s = pWert;}
+
+
+}
