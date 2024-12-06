@@ -1,6 +1,6 @@
 public class Polybius extends Kryptomat{
     public char alphabetQuadrat[][] = new char[7][7];
-    private int s;
+    public String sv = "";
 
 
     public void Polybius(){
@@ -27,9 +27,13 @@ public class Polybius extends Kryptomat{
             z++;
             i++;
         }
-
     }
     public void verschluesseln(){
+       for (int i = 0; i<sv.length(); i = i+2) {
+          int s1 = Integer.parseInt(sv.substring(i,i));
+           int  s2 = Integer.parseInt(sv.substring(i+1,i+1));
+           gt = gt+ alphabetQuadrat[s1][s2];
+       }
 
     };
 
@@ -39,10 +43,10 @@ public class Polybius extends Kryptomat{
     };
 
 
-    public int getS() {
-        return s;
+    public String getS() {
+        return sv;
     }
-    public void setS(int pWert ){s = pWert;}
+    public void setS(String pWert ){sv = pWert;}
 
 
 }

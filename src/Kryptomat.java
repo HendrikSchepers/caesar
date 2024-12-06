@@ -5,13 +5,24 @@ public abstract class Kryptomat{
     public abstract void verschluesseln();
     public  abstract void entschluessln();
 
+    /**
+     * // gibt den Buchstaben zum Ascii wert wieder aus
+     * @param pWert
+     * @return Buchstabe
+     */
     public char getChar(int pWert) {
         return (char)pWert;
-    }// gibt den Buchstaben zum Ascii wert wieder aus
+    }
+
+    /**
+     *  // Gibt den Ascii wert zum angefragten Buchstaben aus
+     * @param pWert
+     * @return ACII wert
+     */
     public int getAscii(char pWert) {
     return (int) pWert;
     }
-    // Gibt den Ascii wert zum angefragten Buchstaben aus
+
 
     /**
      * Gibt das verschlüsselte Wort zurück
@@ -21,7 +32,7 @@ public abstract class Kryptomat{
     return gt;
     }
     /*
-    ** kriegt den geheimtext den der Benutzter in der Konsole angibt
+    * kriegt den geheimtext den der Benutzter in der Konsole angibt
      */
     public void setGt(String pgt) {
      gt = pgt;

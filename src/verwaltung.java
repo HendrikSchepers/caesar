@@ -40,8 +40,8 @@ public class verwaltung  {
 
 
                 caesar.setS(s);
-                this.caesar.verschluesseln();
-                System.out.println("Das ist die geheimnachicht: "+this.caesar.getGt());
+                caesar.verschluesseln();
+                System.out.println("Das ist die geheimnachicht: "+caesar.getGt());
             }
             else if (option == 2)
             {
@@ -53,8 +53,8 @@ public class verwaltung  {
                 System.out.println("geben sie den schlüssel als zahl an");
                s =scanner.nextInt();
                caesar.setS(s);
-                 this.caesar.entschluessln();
-                System.out.println("Das entschlüsselte Wort ist " +this.caesar.getKt());
+                caesar.entschluessln();
+                System.out.println("Das entschlüsselte Wort ist " +caesar.getKt());
             }
             else if(option ==3) {
                 viginere = new Viginere();
