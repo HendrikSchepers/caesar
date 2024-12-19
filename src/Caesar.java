@@ -1,5 +1,28 @@
 import java.util.Scanner;
-//
+// Scanner scanner = new Scanner(System.in);
+        System.out.println("Gib den ersten Liebespartner an");
+        choosen1 = scanner.nextLine();
+        System.out.println("Gib den zweiten Liebespartner an");
+        choosen2 = scanner.nextLine();
+        if(choosen1 == choosen2)
+        {
+            choosen1 = "";
+            choosen2 = "";
+            this.Feahikeit();
+        }else{
+         for(int i = 0; i<Array.length-1; i++)
+         {
+            if(Array[i] == choosen1)
+            {
+                choosen1.setLiebespatner(choosen2);
+            }
+            if(Array[i] == choosen2)
+            {
+                choosen2.setLiebespartner(choosen1);
+            }
+         }
+
+        }
 public class Caesar extends Kryptomat
 {
 
